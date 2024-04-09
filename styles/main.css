@@ -17,6 +17,8 @@ body{
     font-size: 16px;
     font-weight: 400;
     color: #000;
+    transition: all 0.5s linear;
+    background: var(--features-bg);
 }
 
 main{
@@ -50,6 +52,7 @@ a{
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.5px;
+    transition: all 0.5s linear;
 }
 
 .btn:hover{

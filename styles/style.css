@@ -1,6 +1,60 @@
 /* Header */
+
+:root{
+    --header-bg: #fff;
+    --header-text: #000;
+
+    --hero-bg: #252420;
+    --hero-text: #fff;
+    
+    --features-bg: #fff;
+    --features-text: #000;
+    
+    --sale-bg: #252420;
+    --sale-text: #fff;
+
+    --footer-bg: #F8F8F8;
+    --footer-text: #252420;
+}
+
+.light{
+    --header-bg: #fff;
+    --header-text: #000;
+
+    --hero-bg: #fff;
+    --hero-text: #252420;
+    
+    --features-bg: #fff;
+    --features-text: #000;
+    
+    --sale-bg: #fff;
+    --sale-text: #252420;
+
+    --footer-bg: #F8F8F8;
+    --footer-text: #252420;
+}
+
+
+.dark{
+    --header-bg: #252420;
+    --header-text: #fff;
+
+    --hero-bg: #252420;
+    --hero-text: #fff;
+    
+    --features-bg: #252420;
+    --features-text: #fff;
+    
+    --sale-bg: #252420;
+    --sale-text: #fff;
+
+    --footer-bg: #252420;
+    --footer-text: #F8F8F8;
+}
+
+
 .header {
-    background: #FFF;
+    background: var(--header-bg);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
     border-top: 5px solid #FF7500;
 }
@@ -15,9 +69,14 @@
     gap: 12px;
     margin-right: auto;
 }
+.logo img{
+    border-radius: 40%;
+    background: #fff;
+
+}
 
 .logo_text{
-    color: #252420;
+    color: var(--header-text);
     font-family: "Roboto Condensed", sans-serif ;
     font-size: 32px;
     font-weight: 700;
@@ -32,11 +91,12 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    color: #000;
+    color: var(--header-text);
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
 }
+
 
 
 /* ************************ */
@@ -46,7 +106,7 @@
 /* Hero section */
 .hero {
     padding: 40px 0;
-    background: #252420;
+    background: var(--hero-bg);
 }
 
 .hero_container {
@@ -66,7 +126,7 @@
     margin-bottom: 40px;
 }
 .hero_title {
-    color: #FFF;
+    color: var(--hero-text);
     margin-bottom: 24px;
     font-size: 40px;
     font-weight: 700;
@@ -75,7 +135,7 @@
     font-family: "Roboto Condensed";
 }
 .hero_decs {
-    color: #FFF;
+    color: var(--hero-text);
     font-size: 16px;
     font-weight: 400;
     line-height: 150%; /* 24px */
@@ -92,6 +152,7 @@
 
 .features {
     padding: 210px 0;
+    background: var(--features-bg);
 }
 
 
@@ -99,7 +160,7 @@
     margin-bottom: 24px;
 }
 .features_title {
-    color: #000;
+    color: var(--features-text);
     font-size: 72px;
     font-weight: 700;
     line-height: 86.4px; /* 120% */
@@ -117,7 +178,7 @@
 
 .features_item h5{
     margin-bottom: 12px;
-    color: #000;
+    color: var(--features-text);
     font-size: 24px;
     font-weight: 700;
     line-height: 28.8px; /* 120% */
@@ -128,7 +189,7 @@
 .features_item p{
     width: 100%;
     max-width: 314px;
-    color: #000;
+    color: var(--features-text);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; /* 150% */
@@ -141,13 +202,13 @@
 .sale {
     padding: 120px 0;
     margin-bottom: 40px;
-    color: #fff;
+    color: var(--sale-text);
+    background: var(--sale-bg);
 }
 
 .sale_container {
-    max-width: 1100px;
     padding: 64px;
-    background: #252420;
+    max-width: 1100px;
     border-radius: 12px;
     display: flex;
     justify-content: space-between; 
@@ -188,7 +249,7 @@
 
 .footer{
     padding: 56px 0;
-    background: #F8F8F8;
+    background: var(--footer-bg);
 }
 
 
@@ -205,6 +266,7 @@
 }
 .messangers_item {
     color: #252420;
+    transition: all 0.5s linear;
 }
 
 .messangers_item:hover{
@@ -228,9 +290,53 @@
     gap: 16px;
 }
 .footer_item {
-    color: #252420;
+    color: var(--footer-text);
+    transition: all 0.4s linear;
 }
 
 .footer_item:hover{
     color: #FF7500;
+}
+
+.darkmode{
+    width: 100%;
+    max-width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    padding-inline: 5px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #ebebeb;
+    border-radius: 70px;
+    cursor: pointer;
+
+    margin-left: 10px;
+}
+.darkmode:hover{
+    color: #fff;
+}
+
+.dark_icon{
+    position: absolute;
+    transition: 0.8s;
+}
+
+.active{
+    transform: translateX(100%);
+}
+.ligth_icon{
+    transition: 0.5s;
+    position: absolute;
+    right: 10%;
+}
+.light_icon_hidden{
+    transition: 0.3s;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+.dark_icon_hidden{
+    visibility: hidden;
+    transition: 0.01s;
 }
